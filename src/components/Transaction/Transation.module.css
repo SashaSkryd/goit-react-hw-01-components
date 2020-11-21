@@ -1,0 +1,27 @@
+.transactionHistory {
+  margin: 50px 50px;
+  width: 500px;
+  border-collapse: collapse;
+}
+.titleContainer {
+  width: 20px;
+}
+.title {
+  background-color: rgb(29, 168, 168);
+  padding: 7px 0;
+  color: white;
+}
+.title:not(:last-child) {
+  border-right: 1px solid #ffffff;
+}
+.type {
+  padding: 7px 0;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: grey;
+  border: 1px solid #212121;
+}
+.row:nth-child(2n) {
+  background-color: rgb(221, 219, 219);
+}
