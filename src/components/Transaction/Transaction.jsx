@@ -1,24 +1,24 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import Style from './Transation.module.css'
+import style from './Transation.module.css'
 
 export default function Transaction ({ items }) {
   return (
-    <table className={Style.transactionHistory}>
-      <thead className={Style.titleContainer}>
+    <table className={style.transactionHistory}>
+      <thead className={style.titleContainer}>
         <tr>
-          <th className={Style.title}>Type</th>
-          <th className={Style.title}>Amount</th>
-          <th className={Style.title}>Currency</th>
+          <th className={style.title}>Type</th>
+          <th className={style.title}>Amount</th>
+          <th className={style.title}>Currency</th>
         </tr>
       </thead>
-      <tbody className={Style.titleContainer}>
+      <tbody className={style.titleContainer}>
         {items.map((item) => {
           return (
-            <tr key={item.id} className={Style.row}>
-              <td className={Style.type}>{item.type}</td>
-              <td className={Style.type}>{item.amount}</td>
-              <td className={Style.type}>{item.currency}</td>
+            <tr key={item.id} className={style.row}>
+              <td className={style.type}>{item.type}</td>
+              <td className={style.type}>{item.amount}</td>
+              <td className={style.type}>{item.currency}</td>
             </tr>
           )
         })}

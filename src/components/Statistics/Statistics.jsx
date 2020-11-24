@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Style from './Statistics.module.css';
+import style from './Statistics.module.css';
 
-export default function Statistics({ items }) {
+export default function Statistics({stats, title }) {
 
     function Color() {
     let colorOne = Math.floor(Math.random() * 255)
@@ -12,16 +12,20 @@ export default function Statistics({ items }) {
    }
     
     return (
-        <section className={Style.statistics}>
-        <ul className={Style.statList}>
-            {items.map(item => (
-                <li key={item.id} className={Style.statListItem} style={{ backgroundColor: `${Color()}`}}>
-                    <span className={Style.label}>{item.label}</span>
-                    <span className={Style.percentage}>{item.percentage}%</span>
+        <div className={style.StatisticsContainer}>
+        <section className={style.statistics}>
+         {title && <h2 className={style.title}>{title}</h2>}       
+        <h2 className={style.title}>{title}</h2>
+        <ul className={style.statList}>
+            {stats.map(item => (
+                <li key={item.id} className={style.statListItem} style={{ backgroundColor: `${Color()}`}}>
+                    <span className={style.label}>{item.label}</span>  
+                    <span className={style.percentage}>{item.percentage}%</span>
                 </li>
             ))}
             </ul>
-        </section>
+            </section>
+            </div>
     )
 }
 
