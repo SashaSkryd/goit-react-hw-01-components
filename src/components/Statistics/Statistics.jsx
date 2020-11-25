@@ -15,7 +15,6 @@ export default function Statistics({stats, title }) {
         <div className={style.StatisticsContainer}>
         <section className={style.statistics}>
          {title && <h2 className={style.title}>{title}</h2>}       
-        <h2 className={style.title}>{title}</h2>
         <ul className={style.statList}>
             {stats.map(item => (
                 <li key={item.id} className={style.statListItem} style={{ backgroundColor: `${Color()}`}}>

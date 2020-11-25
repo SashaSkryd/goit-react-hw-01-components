@@ -22,7 +22,6 @@ export default function App() {
       
       <Statistics stats={statisticsArr} title={'Upload stats'} />  
   
-
           <FriendList friends={friendsArr} />
 
       <TransactionHistory items={transactions} />
