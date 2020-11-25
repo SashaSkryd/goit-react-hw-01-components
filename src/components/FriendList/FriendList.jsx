@@ -7,7 +7,10 @@ export default function FriendList({ friends }) {
     return (
         <section className={style.friends}>
             <ul className={style.friendList}>
-            <FriendListItem friends={friends}/>
+            {    friends.map(frend => {
+                  return ( <FriendListItem frend={frend}/>)
+            })
+            }
             </ul>
         </section>
     )
